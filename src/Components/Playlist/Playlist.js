@@ -16,16 +16,17 @@ class Playlist extends React.Component {
     }
 
 
+
     render() {
         return (
             <div className="Playlist">
               <input defaultValue={ 'New Playlist' }
-                      onChange={ this.props.handleNameChange }/>
+                      onChange={ this.handleNameChange }/>
               <Tracklist tracks={ this.props.playListTrack }
                          onRemove={ this.props.onRemove }
                          isRemoval={true} />
    
-            <button className="Playlist-save">SAVE TO SPOTIFY</button>
+            <button className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</button>
 </div>
         )
     }
